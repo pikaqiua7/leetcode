@@ -27,14 +27,14 @@ public class InsertDeleteGetRandom {
     public static void main(String[] args) {
 	// TODO Auto-generated method stub
 	RandomizedSet obj = new RandomizedSet();
-	System.out.println(obj.insert(1));
-	System.out.println(obj.remove(2));
-	System.out.println(obj.insert(2));
+	System.out.println(obj.insert(-1));
+	System.out.println(obj.remove(-2));
+	System.out.println(obj.insert(-2));
 	for (int i = 0; i < 10; i++)
 	    System.out.println(obj.getRandom());
 
-	System.out.println(obj.remove(1));
-	System.out.println(obj.insert(2));
+	System.out.println(obj.remove(-1));
+	System.out.println(obj.insert(-2));
 	for (int i = 0; i < 10; i++)
 	    System.out.println(obj.getRandom());
     }
@@ -73,7 +73,9 @@ class RandomizedSet {
     public boolean remove(int val) {
 	if (hm.containsKey(val)) {
 	    hm.remove(val);
-	    arrayList.remove(val);
+//	    arrayList.remove(val);
+	    System.out.println("val`s index: " + arrayList.indexOf(val));
+	    arrayList.remove(arrayList.indexOf(val));
 	    return true;
 	} else {
 	    return false;
