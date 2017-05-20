@@ -1,5 +1,7 @@
 package cn.edu.zju.gd.f;
 
+import cn.edu.zju.gd.util.TreeNode;
+
 /*
  * https://leetcode.com/problems/find-bottom-left-tree-value/#/description
  * 
@@ -53,15 +55,5 @@ public class FindBottomLeftTreeValue {
 	    findBottomLeftValue(node.left, depth + 1);
 	if (null != node.right)
 	    findBottomLeftValue(node.right, depth + 1);
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-	val = x;
     }
 }
